@@ -69,7 +69,10 @@ public abstract class Market {
     public String tickerSymbol(LinkedHashMap<String, Object> parameters) {
         return requestHandler.sendPublicRequest(productUrl, TICKER_SYMBOL, parameters, HttpMethod.GET, showLimitUsage);
     }
-
+    private final String TICKER_SYMBOL2 = "/v2/ticker/price";
+    public String tickerSymbol2(LinkedHashMap<String, Object> parameters) {
+        return requestHandler.sendPublicRequest(productUrl, TICKER_SYMBOL2, parameters, HttpMethod.GET, showLimitUsage);
+    }
     private final String BOOK_TICKER = "/v1/ticker/bookTicker";
     public String bookTicker(LinkedHashMap<String, Object> parameters) {
         return requestHandler.sendPublicRequest(productUrl, BOOK_TICKER, parameters, HttpMethod.GET, showLimitUsage);
